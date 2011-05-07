@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title>marmelAID | FUSION</title>
+    <meta name="keywords" content="fusion, ai, fusion ai, hello operator, operator, leila johnston, duncan gough, leila, suttree" />
+    <meta name="description" content="A new game from Leila Johnston and Duncan Gough" />
+    <meta name="robots" content="index, follow, stop by for some tea, but don't look behind the orange door" />
+  </head>
+  <body id='widget'>
+    <%= stylesheet_link_tag 'widget' %>
+    <%= javascript_include_tag :defaults %>
+    <%= javascript_include_tag 'application', 'audio-player' %>
+    <script type="text/javascript"> 
+      AudioPlayer.setup("/flash/player.swf", {
+        width: 200
+      });
+    </script>
+    <%= yield %>
+    <%= render :partial => 'shared/google_analytics' -%>
+  </body>
+</html>

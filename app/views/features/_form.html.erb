@@ -1,0 +1,13 @@
+<div>
+  <h4><%= "Feature at #{params[:x]}, #{params[:y]}" -%></h4>
+  <%= f.hidden_field :x, :value => params[:x].to_i %>
+  <%= f.hidden_field :y, :value => params[:y].to_i %>
+  <%= label(:tile, :name) %>
+  <%= f.text_field :name -%>
+  <br/>
+  <%= label(:tile, :description) %>
+  <%= f.text_field :description -%>
+  <br/>
+  <%= label(:tile, :image) %>
+  <%= f.select :image_id, Image.for_feature.collect{ |i| [i.filename, i.id] } %>
+</div>

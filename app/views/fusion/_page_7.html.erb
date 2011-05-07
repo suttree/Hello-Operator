@@ -1,0 +1,7 @@
+<span id='audioPlayer'>
+  <%= audioPlayer("Who will answer the call of The Operator? Who will decontaminate your heart?") -%>
+</span>
+<br/>
+<img src='/images/fusion/WhoWillAnswerTheCall.jpg' class='fusion' />
+<br/>
+<%= link_to_remote 'next &raquo;', :url => {:controller => 'fusion', :action => 'next', :page => '8'}, :update => 'fusion', :loading => "$('#progress_indicator').show();", :success => "$('#progress_indicator').hide();" -%>

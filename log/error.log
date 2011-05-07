@@ -1,0 +1,21 @@
+[Thu Feb 18 21:00:14 2010] [error] [client 80.1.144.4] Directory index forbidden by Options directive: /home/suttree/public_html/hello-operator.co.uk/public/
+[Thu Feb 18 21:00:14 2010] [error] [client 80.1.144.4] File does not exist: /home/suttree/public_html/hello-operator.co.uk/public/favicon.ico
+[Thu Feb 18 21:01:20 2010] [error] [client 80.1.144.4] Directory index forbidden by Options directive: /home/suttree/public_html/hello-operator.co.uk/public/
+[Thu Feb 18 21:01:20 2010] [error] [client 80.1.144.4] File does not exist: /home/suttree/public_html/hello-operator.co.uk/public/favicon.ico
+[Thu Feb 18 21:01:24 2010] [error] [client 80.1.144.4] Directory index forbidden by Options directive: /home/suttree/public_html/hello-operator.co.uk/public/
+[Thu Feb 18 23:04:22 2010] [error] [client 80.1.144.4] Directory index forbidden by Options directive: /home/suttree/public_html/hello-operator.co.uk/public/
+[Thu Feb 18 23:04:38 2010] [error] [client 80.1.144.4] Directory index forbidden by Options directive: /home/suttree/public_html/hello-operator.co.uk/public/
+[Fri Feb 19 18:07:30 2010] [error] [client 80.1.144.4] Directory index forbidden by Options directive: /home/suttree/public_html/hello-operator.co.uk/public/
+[Fri Feb 19 19:10:29 2010] [error] [client 80.1.144.4] Directory index forbidden by Options directive: /home/suttree/public_html/hello-operator.co.uk/public/
+[Sat Feb 20 10:23:30 2010] [error] [client 80.1.144.4] Directory index forbidden by Options directive: /home/suttree/public_html/hello-operator.co.uk/public/
+[Sat Feb 20 12:15:19 2010] [error] [client 80.1.144.4] (13)Permission denied: file permissions deny server access: /home/suttree/public_html/hello-operator.co.uk/public/images/ui/close.jpeg, referer: http://www.hello-operator.co.uk/
+[Sat Feb 20 12:15:19 2010] [error] [client 80.1.144.4] (13)Permission denied: file permissions deny server access: /home/suttree/public_html/hello-operator.co.uk/public/images/ui/panel.png, referer: http://www.hello-operator.co.uk/
+[Sat Feb 20 12:16:06 2010] [error] [client 80.1.144.4] (13)Permission denied: file permissions deny server access: /home/suttree/public_html/hello-operator.co.uk/public/images/ui/close.jpeg, referer: http://www.hello-operator.co.uk/
+[Sat Feb 20 12:16:08 2010] [error] [client 80.1.144.4] (13)Permission denied: file permissions deny server access: /home/suttree/public_html/hello-operator.co.uk/public/images/ui/panel.png, referer: http://www.hello-operator.co.uk/
+[Sat Feb 20 12:16:30 2010] [error] [client 80.1.144.4] (13)Permission denied: file permissions deny server access: /home/suttree/public_html/hello-operator.co.uk/public/images/ui/close.jpeg
+[Mon Feb 22 21:41:07 2010] [error] [client 80.1.144.4] (13)Permission denied: file permissions deny server access: /home/suttree/public_html/hello-operator.co.uk/public/audio/hold-music.mp3, referer: http://www.hello-operator.co.uk/flash/player.swf
+[Mon Feb 22 21:41:34 2010] [error] [client 80.1.144.4] (13)Permission denied: file permissions deny server access: /home/suttree/public_html/hello-operator.co.uk/public/audio/hold-music.mp3
+[Wed Mar 24 10:55:02 2010] [error] [client 82.211.85.236] (13)Permission denied: file permissions deny server access: /home/suttree/public_html/hello-operator.co.uk/public/images/fusion/EmptyRoom.jpg, referer: http://hello-operator.co.uk/fusion
+[Sat Mar 27 17:32:12 2010] [error] [client 80.1.144.4] (13)Permission denied: file permissions deny server access: /home/suttree/public_html/hello-operator.co.uk/public/images/jparallax/test2/Parallax-scroll-example-layer-2.gif, referer: http://hello-operator.co.uk/fusion/parallax
+[Sat Mar 27 17:32:12 2010] [error] [client 80.1.144.4] (13)Permission denied: file permissions deny server access: /home/suttree/public_html/hello-operator.co.uk/public/images/jparallax/test2/Parallax-scroll-example-layer-1.gif, referer: http://hello-operator.co.uk/fusion/parallax
+[Sat Mar 27 17:32:12 2010] [error] [client 80.1.144.4] (13)Permission denied: file permissions deny server access: /home/suttree/public_html/hello-operator.co.uk/public/images/jparallax/test2/Parallax-scroll-example-layer-3.gif, referer: http://hello-operator.co.uk/fusion/parallax

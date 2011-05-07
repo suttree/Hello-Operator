@@ -1,0 +1,56 @@
+<%= render :partial => 'shared/appear' -%>
+
+<div id="appear">
+  <div id='header'>
+    <a href='/'>Hello, Operator?</a>
+  </div>
+
+  <div id='about'>
+    <%= render :partial => 'shared/ai_status' %>
+    <div id='title'>F.U.S.I.O.N</div>
+    <div id='subtitle'>Who will decontaminate her heart?</div>
+    <br/>
+    <p>
+      <% if logged_in? %>
+        Hello, <%= current_user.login %>?
+        &nbsp;
+        <span id='audioPlayer'>
+          <%= audioPlayer("Hello, #{current_user.login}?") -%>
+        </span>
+        <div id='ai_input'>
+          <% if ai_online? -%>
+            <%= render :partial => 'q' -%>
+          <% else -%>
+            <%= render :partial => 'q_offline' -%>
+          <% end -%>
+        </div>
+        <div id='chat'> </div>
+      <% else %>
+        A new game from <a href='http://lei.la/'>Leila Johnston</a> and <a href='http://suttree.com'>Duncan Gough</a>.
+      <% end %>
+    </p>
+    <div id='credit'>
+      Image courtesy of <a href='http://www.flickr.com/photos/hebster/2040883922/'>flickr</a>.
+    </div>
+  </div>
+  <div id='login'>
+    <% if logged_in? %>
+      <%= render :partial => 'shared/logout' %>
+    <% else %>
+      <%= render :partial =>'shared/login' %>
+    <% end %>
+  </div>
+</div>
+
+<% if logged_in? && ai_online? -%>
+  <%= render :partial => 'periodic_conditional', :locals => {:check_var => true}  %>
+  <%= periodically_call_remote(:url => '/ai/poll_for_responses', :condition => "check_var == true", :frequency => '5') %>
+<% end -%>
+
+<script>
+  $(function () {
+    $(window).load(function () {
+      $('#q').focus();
+    });
+  })
+</script>

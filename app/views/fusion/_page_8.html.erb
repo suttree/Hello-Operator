@@ -1,0 +1,7 @@
+<span id='audioPlayer'>
+  <%= audioPlayer("This is the enigmatic Artificial Intelligence known as Fusion. Fusion will help you in your search for love.") -%>
+</span>
+<br/>
+<img src='/images/fusion/ThisIsTheEnigmatic.jpg' class='fusion' />
+<br/>
+<%= link_to_remote 'next &raquo;', :url => {:controller => 'fusion', :action => 'next', :page => '9'}, :update => 'fusion', :loading => "$('#progress_indicator').show();", :success => "$('#progress_indicator').hide();" -%>

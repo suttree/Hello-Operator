@@ -1,0 +1,25 @@
+body#widget {
+  margin: 0px;
+  padding: 0px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 75.2%;
+  line-height: 1.538em;
+}
+
+div#widget {
+  background-color: #fff;
+}
+
+div#widget p {
+  color: rgb(114, 114, 114);
+  font-size: 1em;
+  line-height: 1.7;
+}
+
+span#online {
+  color: green;
+}
+
+span#offline {
+  color: red;
+}

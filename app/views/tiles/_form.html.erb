@@ -1,0 +1,7 @@
+<div>
+  <h4><%= "Tile at #{params[:x]}, #{params[:y]}" -%></h4>
+  <%= f.hidden_field :x, :value => params[:x].to_i %>
+  <%= f.hidden_field :y, :value => params[:y].to_i %>
+  <%= label(:tile, :image) %>
+  <%= f.select :image_id, Image.for_background.collect{ |i| [i.filename, i.id] } %>
+</div>

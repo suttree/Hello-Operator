@@ -1,0 +1,7 @@
+<span id='audioPlayer'>
+  <%= audioPlayer("When will joy rise again from the wreckage of this ruined city?") -%>
+</span>
+<br/>
+<object width="480" height="295"><param name="movie" value="http://www.youtube.com/v/NfMiUEV6SHM&hl=en_US&fs=1&rel=0&autoplay=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/NfMiUEV6SHM&hl=en_US&fs=1&rel=0&autoplay=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="480" height="295"></embed></object>
+<br/>
+<%= link_to_remote 'next &raquo;', :url => {:controller => 'fusion', :action => 'next', :page => '5'}, :update => 'fusion', :loading => "$('#progress_indicator').show();", :success => "$('#progress_indicator').hide();" -%>

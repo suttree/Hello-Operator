@@ -1,0 +1,28 @@
+<%= render :partial => 'shared/appear' -%>
+
+<div id="appear">
+  <div id='header'>
+    <a href='/'>Hello, Operator?</a>
+  </div>
+
+  <div id='about'>
+    <%= render :partial => 'shared/ai_status' %>
+    <div id='title'>F.U.S.I.O.N</div>
+    <div id='subtitle'>Who will decontaminate her heart?</div>
+
+    <%= render :partial => 'shared/launching_soon' %>
+
+    <div id='credit'>
+      Image courtesy of <a href='http://www.flickr.com/photos/hebster/2040883922/'>flickr</a>.
+    </div>
+
+  </div>
+
+  <div id='login'>
+    <% if logged_in? %>
+      <%= render :partial => 'shared/logout' %>
+    <% else %>
+      <%= render :partial =>'shared/login' %>
+    <% end %>
+  </div>
+</div>

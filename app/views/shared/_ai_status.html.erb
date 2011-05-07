@@ -1,0 +1,11 @@
+<div id='ai_status'>
+  <% if logged_in? && ai_online? %>
+    <span id='online'>
+      <img src='/images/ui/phone.gif' id='ai_status' width='18' height='18' /><a href='/ai/' id='status'>AI online</a>
+    </span>
+  <% else %>
+    <span id='offline'>
+      <img src='/images/ui/noentry.gif' id='ai_status' width='18' height='18' /><span id='status'>AI offline</span>
+    </span>
+  <% end %>
+</div>

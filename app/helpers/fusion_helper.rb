@@ -1,0 +1,2 @@
+module FusionHelper
+end

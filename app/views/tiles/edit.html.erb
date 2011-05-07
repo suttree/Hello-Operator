@@ -1,0 +1,6 @@
+<% form_for([@map, @tile]) do |f| -%>
+  <%= f.error_messages %>
+  <%= flash[:notice] %>
+  <%= render :partial => "form", :locals => {:f => f} %>
+  <%= f.submit 'Update tile' %>
+<% end -%>

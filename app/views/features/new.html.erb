@@ -1,0 +1,5 @@
+<% form_for([@map, @tile, @feature]) do |f| -%>
+  <%= f.error_messages %>
+  <%= render :partial => "form", :locals => {:f => f} %>
+  <%= f.submit 'Create feature' %>
+<% end -%>

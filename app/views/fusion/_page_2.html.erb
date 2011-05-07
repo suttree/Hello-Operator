@@ -1,0 +1,7 @@
+<span id='audioPlayer'>
+  <%= audioPlayer("And something dreadful.") -%>
+</span>
+<br/>
+<img src='/images/fusion/SomethingDreadful.png' class='fusion' />
+<br/>
+<%= link_to_remote 'next &raquo;', :url => {:controller => 'fusion', :action => 'next', :page => '3'}, :update => 'fusion', :loading => "$('#progress_indicator').show();", :success => "$('#progress_indicator').hide();" -%>

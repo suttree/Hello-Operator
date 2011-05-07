@@ -1,0 +1,6 @@
+<%= form_remote_tag( :url => {:controller => :ai, :action => :ask}, :loading => "$('#progress_indicator').show();", :success => "$('#progress_indicator').hide();" ) -%>
+  <%= hidden_field_tag :message_id, nil %>
+  <%= text_field_tag :q, nil, :size => (local_assigns.has_key?(:size) ? size : 50), :maxlength => 140 %>
+  <%= submit_tag (local_assigns.has_key?(:reply) ? reply : '&raquo;'), :disable_with => "Sending..." %>
+  <%= image_tag 'ui/spinner.gif', :id => 'progress_indicator', :style => 'display:none' %>
+</form>

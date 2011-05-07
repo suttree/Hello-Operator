@@ -1,0 +1,5 @@
+<% if logged_out? %>
+  <% form_tag({:controller => 'users', :action => 'create'}, {:method => 'post', :target => '_top'}) do %>
+    <input type='image' src='/images/twitter.png' value='Sign In with Twitter' name='register_with_oauth' id='user_submit' class=''/>
+  <% end %>
+<% end %>

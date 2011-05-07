@@ -1,0 +1,34 @@
+<%= render :partial => 'shared/appear' -%>
+
+<div id="appear">
+  <div id='header'>
+    <a href='/'>Hello, Operator?</a>
+  </div>
+
+  <div id='admin-about'>
+    <div id='title'>F.U.S.I.O.N</div>
+    <div id='subtitle'>Who will <i>administrate</i> her heart?</div>
+    <br/>
+    <div id='msgs'>
+      <ul>
+        <% @messages.each do |msg| -%>
+          <%= render :partial => 'admin_msg', :locals => {:msg => msg} %>
+        <% end -%>
+      </ul>
+      <%= will_paginate @messages %>
+      <small><i><a href='/ai/admin'>Refresh</a> to see more messages.</i></small>
+    </div>
+    <div id='credit'>
+      Image courtesy of <a href='http://www.flickr.com/photos/hebster/2040883922/'>flickr</a>.
+    </div>
+  </div>
+  <div id='login'>
+    <% if logged_in? %>
+      <%= render :partial => 'shared/logout' %>
+    <% else %>
+      <%= render :partial =>'shared/login' %>
+    <% end %>
+  </div>
+</div>
+
+<%= periodically_call_remote(:url => '/ai/poll_for_questions', :frequency => '5') if logged_in? -%>

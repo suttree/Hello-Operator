@@ -1,0 +1,25 @@
+<br/>
+<p>
+  <% if logged_in? %>
+    Hello, <%= current_user.login %>?
+    <%= render :partial => 'ai/q' -%>
+    <div id='audioPlayer'>
+      <%= audioPlayer("Hello, #{current_user.login}?") -%>
+    </div>
+    <div id='chat'> </div>
+  <% else %>
+    A new game from <a href='http://lei.la/'>Leila Johnston</a> and <a href='http://suttree.com'>Duncan Gough</a>.
+  <% end %>
+</p>
+
+<% if logged_in? -%>
+  <%= periodically_call_remote(:url => '/ai/poll_for_responses', :frequency => '7') -%>
+
+  <script>
+    $(function () {
+      $(window).load(function () {
+        $('#q').focus();
+      });
+    })
+  </script>
+<% end %>

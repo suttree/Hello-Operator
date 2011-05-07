@@ -1,0 +1,65 @@
+<%= render :partial => 'shared/appear' -%>
+
+<div id="appear">
+  <div id='header'>
+    <a href='/'>Hello, Operator?</a>
+  </div>
+
+  <div id='map-viewer'>
+    <table id='controls'>
+      <tr id='top'>
+        <td colspan='3' align='middle'><a href='<%= link_up(@tile) -%>'>^</a></td>
+      </tr>
+      <tr>
+        <td id='left'><a href='<%= link_left(@tile) -%>'>&laquo;</a></td>
+        <td id='middle'><%= link_to 'Home', '/maps/1' -%></td>
+        <td id='right'><a href='<%= link_right(@tile) -%>'>&raquo;</a></td>
+      </tr>
+      <tr id='bottom'>
+        <td colspan='3' align='middle'><a href='<%= link_down(@tile) -%>'>v</a></td>
+      </tr>
+    </table>
+
+    <div id='title'><%= @map.name -%></div>
+    <div id='subtitle'>Map</div>
+
+    <table id='map'>
+      <tr>
+        <% Tile.viewport_for(params[:x], params[:y]).each_with_index do |tile, index| -%>
+          <% x,y = tile -%>
+          <% current_tile = Tile.find_by_x_and_y(x, y) -%>
+          <% if index > 0 && index % (Tile::X_WINDOW_SIZE + 1) == 0 -%>
+            </tr><tr>
+          <% end -%>
+          <% if current_tile -%>
+            <% has_features = current_tile.features.any? -%>
+            <td class="tile image_<%= current_tile.image_id -%> <%= "features" if has_features -%>">
+              <%- if has_features -%>
+                <%= link_to image_tag("/images/tiles/#{current_tile.features.first.image.filename}", :class => "feature"), details_map_tile_feature_path(@map, current_tile, current_tile.features.first), :rel => "facebox" %>
+              <%- else -%>
+                <%= link_to "Add feature at #{x}, #{y}?", new_map_tile_feature_path(@map, current_tile) + "?x=#{x}&y=#{y}", :rel => "facebox", :class => "admin" %>
+              <%- end -%>
+            </td>
+          <% else -%>
+            <td class="tile missing">
+              <%= link_to "Create tile at #{x}, #{y}?", new_map_tile_path(@map) + "?x=#{x}&y=#{y}", :rel => "facebox", :class => "admin" %>
+            </td>
+          <% end -%>
+        <% end -%>
+      </tr>
+    </table>
+
+  </div>
+  <div id='login'>
+    <% if logged_in? %>
+      <%= render :partial => 'shared/logout' %>
+    <% else %>
+      <%= render :partial =>'shared/login' %>
+    <% end %>
+  </div>
+</div>
+
+<%
+# For the Operator avatar image in the bottom left:
+#  http://matthewjamestaylor.com/blog/keeping-footers-at-the-bottom-of-the-page
+%>

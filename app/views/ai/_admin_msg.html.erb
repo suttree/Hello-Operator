@@ -1,0 +1,23 @@
+<li id='msg_<%= msg.id -%>'>
+  <img src='<%=h msg.sender.twitter_profile_image %>' id='avatar'/>
+  <span id='name'><%= msg.sender.login -%></span>
+  <span id='meta'><%= time_ago_in_words(msg.created_at) -%> ago</span>
+  <%=h msg.body -%>
+  <% if msg.replies.any? %>
+    <% msg.replies.each do |reply| -%>
+      <br/>
+      <i>&raquo; <%=h reply.body -%></i>
+    <% end -%>
+  <% end %>
+  <span id='reply'>
+    <a href='#' onclick="$('#reply_to_<%= msg.id -%>').show();$('#q_<%= msg.id -%>').focus();return false;">Reply</a>
+  </span>
+  <span class='reply_to' id='reply_to_<%= msg.id -%>'>
+    <%= form_remote_tag( :url => {:action => :reply, :id => msg.id, :method => :post}, :loading => "$('#progress_indicator-#{msg.id}').show();", :success => "$('#progress_indicator-#{msg.id}').hide();" ) -%>
+      <%= text_field_tag "q_#{msg.id}", nil, :size => 50, :maxlength => 140 %>
+      <%= submit_tag 'Reply', :disable_with => "Sending..." %>
+      <a href='#' onclick="$('#reply_to_<%= msg.id -%>').hide();return false;" id='close_button'>Close</a>
+      <%= image_tag 'ui/spinner.gif', :id => "progress_indicator-#{msg.id}", :style => 'display:none' %>
+    </form>
+  </span>
+</li>

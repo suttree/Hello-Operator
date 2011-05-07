@@ -1,0 +1,7 @@
+<span id='audioPlayer'>
+  <%= audioPlayer("Helping is what you do. But now there is no one left to help. You do not know whether to laugh or cry. Your doctor said you should not try to laugh. Just before he died.") -%>
+</span>
+<br/>
+<img src='/images/fusion/EmptyRoom.jpg' class='fusion' />
+<br/>
+<%= link_to_remote 'next &raquo;', :url => {:controller => 'fusion', :action => 'next', :page => '7'}, :update => 'fusion', :loading => "$('#progress_indicator').show();", :success => "$('#progress_indicator').hide();" -%>

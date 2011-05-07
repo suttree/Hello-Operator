@@ -1,0 +1,33 @@
+<%= render :partial => 'shared/appear' -%>
+
+<div id="appear">
+  <div id='widget'>
+    <p>
+      <% if logged_in? && ai_online? %>
+        <span id='audioPlayer'>
+          <%= audioPlayer("Hello, #{current_user.login}?") -%>
+        </span>
+        <div id='ai_input'>
+          <%= render :partial => 'q', :locals => {:size => 20, :reply => 'Send'} -%>
+        </div>
+        <div id='chat'> </div>
+      <% elsif ai_online? -%>
+        The marmelAID programme is <span id='online'>online</span>.
+      <% else %>
+        The marmelAID programme is <span id='offline'>offline</span>.
+      <% end %>
+    </p>
+  </div>
+  <div id='login'>
+    <% if logged_in? %>
+      <%#= render :partial => 'shared/logout' %>
+    <% elsif ai_online? %>
+      <%= render :partial => 'shared/login' %>
+    <% end %>
+  </div>
+</div>
+
+<% if logged_in? && ai_online? -%>
+  <%= render :partial => 'periodic_conditional', :locals => {:check_var => true}  %>
+  <%= periodically_call_remote(:url => '/ai/poll_for_responses', :condition => "check_var == true", :frequency => '5') %>
+<% end -%>

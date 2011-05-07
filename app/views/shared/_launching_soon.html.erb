@@ -1,0 +1,20 @@
+<br/>
+A new game from <a href='http://lei.la/'>Leila Johnston</a> and <a href='http://suttree.com'>Duncan Gough</a>.
+<br/>
+<br/>
+Signup below to play the game with us, as soon as it launches.
+<div id="messageBox">
+  <div id="message"> </div>
+  <div class="clear">
+    <div class="notifyForm">
+      <% form_remote_for :news_letter_subscriber, :url => news_letter_subscribers_path, :loading => "$('#progress_indicator').show();" , :success => "$('#progress_indicator').hide();" do -%>
+        <%= text_field_tag :email, 'Enter your email here', :class => "subscriberEmail", :onfocus => "if(this.value == 'Enter your email here'){ this.value = '' }", :onblur => "if(this.value == ''){ this.value = 'Enter your email here' }", :size => 40 -%>
+        <%= submit_tag "Signup &raquo;", :class => "notifyMeButton" -%><%= image_tag('launching_soon/spinner.gif', :style => "margin-left:10px; display:none", :id => 'progress_indicator') -%>
+      <% end %>
+      <%= image_tag 'ui/spinner.gif', :id => 'progress_indicator', :style => 'display:none' %>
+    </div>
+  </div>
+  <div id='audioPlayer'>
+    <%= holdPlayer("Please hold, your call is important to us.") -%>
+  </div>  
+</div>

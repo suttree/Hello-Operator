@@ -1,0 +1,13 @@
+<table>
+  <tr>
+    <td>
+      <%= image_tag("/images/tiles/#{@feature.image.filename}", :class => "feature_description") -%>
+      &nbsp;&nbsp;
+    </td>
+    <td class='feature_description'>
+      <h4><%= @feature.name -%></h4>
+      <br/>
+      <%= @feature.description -%>
+    </td>
+  </tr>
+</table>

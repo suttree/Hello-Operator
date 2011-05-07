@@ -1,0 +1,31 @@
+<%= render :partial => 'shared/appear' -%>
+
+<div id="appear">
+  <div id='header'>
+    <a href='/'>Hello, Operator?</a>
+  </div>
+
+  <div id='about-fusion'>
+    <div id='title'>F.U.S.I.O.N</div>
+    <div id='subtitle'>Who will decontaminate her heart?</div>
+    <br/>
+    <p id='fusion'>
+      <span id='audioPlayer'>
+        <%= audioPlayer("Welcome to FUSION. A game about something wonderful.") -%>
+      </span>
+      <br/>
+      <img src='/images/fusion/SomethingWonderful.png' class='fusion' />
+      <br/>
+      <%= link_to_remote 'next &raquo;', :url => {:controller => 'fusion', :action => 'next', :page => '2'}, :update => 'fusion', :loading => "$('#progress_indicator').show();", :success => "$('#progress_indicator').hide();" -%>
+    </p>
+    <%= image_tag('launching_soon/spinner.gif', :style => "margin-left:10px; display:none", :id => 'progress_indicator') -%>
+    <div id='credit'>
+      Image courtesy of <a href='http://www.flickr.com/photos/hebster/2040883922/'>flickr</a>.
+    </div>
+  </div>
+  <div id='login'>
+    <a href='mailto:duncan@suttree.com' id='contact'>Contact Us</a>
+  </div>
+</div>
+
+<script src="/javascripts/slider.js" type="text/javascript"></script>
