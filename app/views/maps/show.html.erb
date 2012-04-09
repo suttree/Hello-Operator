@@ -27,7 +27,7 @@
       <tr>
         <% Tile.viewport_for(params[:x], params[:y]).each_with_index do |tile, index| -%>
           <% x,y = tile -%>
-          <% current_tile = Tile.find_by_x_and_y(x, y) -%>
+          <% current_tile = @map.tiles.find_by_x_and_y(x, y) -%>
           <% if index > 0 && index % (Tile::X_WINDOW_SIZE + 1) == 0 -%>
             </tr><tr>
           <% end -%>

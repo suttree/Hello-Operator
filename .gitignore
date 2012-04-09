@@ -4,6 +4,7 @@
 /config/locales/*.csv
 /db/*.sqlite*
 /log
+/log/*
 /public/sitemap*
 /public/system
 /public/uploads
@@ -16,3 +17,5 @@
 *.sw*
 .bundle
 /public/ckeditor_assets/*
+*.mp3
+/signups/data.csv

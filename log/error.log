@@ -19,3 +19,16 @@
 [Sat Mar 27 17:32:12 2010] [error] [client 80.1.144.4] (13)Permission denied: file permissions deny server access: /home/suttree/public_html/hello-operator.co.uk/public/images/jparallax/test2/Parallax-scroll-example-layer-2.gif, referer: http://hello-operator.co.uk/fusion/parallax
 [Sat Mar 27 17:32:12 2010] [error] [client 80.1.144.4] (13)Permission denied: file permissions deny server access: /home/suttree/public_html/hello-operator.co.uk/public/images/jparallax/test2/Parallax-scroll-example-layer-1.gif, referer: http://hello-operator.co.uk/fusion/parallax
 [Sat Mar 27 17:32:12 2010] [error] [client 80.1.144.4] (13)Permission denied: file permissions deny server access: /home/suttree/public_html/hello-operator.co.uk/public/images/jparallax/test2/Parallax-scroll-example-layer-3.gif, referer: http://hello-operator.co.uk/fusion/parallax
+[Thu Dec 15 22:29:43 2011] [error] [client 98.129.238.37] script '/home/suttree/public_html/hello-operator.co.uk/public/index.php' not found or unable to stat
+[Sun Dec 18 07:52:50 2011] [error] [client 41.203.119.18] script '/home/suttree/public_html/hello-operator.co.uk/public/index.php' not found or unable to stat
+[Wed Dec 21 02:42:43 2011] [error] [client 213.150.176.174] script '/home/suttree/public_html/hello-operator.co.uk/public/index.php' not found or unable to stat
+[Mon Dec 26 17:44:09 2011] [error] [client 138.37.100.10] script '/home/suttree/public_html/hello-operator.co.uk/public/index.php' not found or unable to stat
+[Wed Dec 28 02:57:02 2011] [error] [client 38.113.185.74] script '/home/suttree/public_html/hello-operator.co.uk/public/index.php' not found or unable to stat
+[Thu Jan 05 03:25:42 2012] [error] [client 202.147.252.35] script '/home/suttree/public_html/hello-operator.co.uk/public/index.php' not found or unable to stat
+[Mon Jan 30 16:28:13 2012] [error] [client 195.88.82.2] script '/home/suttree/public_html/hello-operator.co.uk/public/index.php' not found or unable to stat
+[Tue Jan 31 01:09:36 2012] [error] [client 69.36.11.78] script '/home/suttree/public_html/hello-operator.co.uk/public/index.php' not found or unable to stat
+[Thu Feb 02 02:08:37 2012] [error] [client 80.82.223.19] script '/home/suttree/public_html/hello-operator.co.uk/public/index.php' not found or unable to stat
+[Tue Feb 07 21:29:39 2012] [error] [client 184.105.189.5] script '/home/suttree/public_html/hello-operator.co.uk/public/index.php' not found or unable to stat
+[Thu Feb 23 21:27:46 2012] [error] [client 66.111.96.186] script '/home/suttree/public_html/hello-operator.co.uk/public/index.php' not found or unable to stat
+[Fri Mar 02 15:29:09 2012] [error] [client 174.143.172.111] script '/home/suttree/public_html/hello-operator.co.uk/public/index.php' not found or unable to stat
+[Fri Mar 02 16:29:34 2012] [error] [client 174.143.172.111] script '/home/suttree/public_html/hello-operator.co.uk/public/index.php' not found or unable to stat

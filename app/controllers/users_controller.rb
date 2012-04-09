@@ -16,7 +16,7 @@ class UsersController < ApplicationController
         @user.twitter_connect
         flash[:notice] = "Account registered!"
       else
-        unless @user.oauth_token.nil?
+        unless @user.oauth_token.nil? || @user.oauth_token.blank?
           @user = User.find_by_oauth_token(@user.oauth_token)
           unless @user.nil?
             UserSession.create(@user)
@@ -24,6 +24,11 @@ class UsersController < ApplicationController
           end
         end
       end
+      #@user.twitter_connect
+      #@user.save
+logger.info @user.inspect
+logger.info '----2'
+      @user.connection.update("UPDATE users set last_request_at = '#{Time.now.utc.to_s(:db)}' WHERE id = #{@user.id}")
       redirect_to '/'
     end
   end
